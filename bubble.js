@@ -8,6 +8,7 @@ class Bubble{
     this.vely = vel;
     this.CanvasWidth = w;
     this.CanvasHeigth = h;
+    this.color = [0,0,0];
   }
 
   checkBounds(){
@@ -32,8 +33,12 @@ class Bubble{
   show(){
     stroke(255);
     strokeWeight(4);
-    noFill();
+    fill(this.color);
     ellipse(this.x, this.y, this.r, this.r)
+  }
+
+  changeColor(){
+    this.color = [50,230,216];
   }
 
   }

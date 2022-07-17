@@ -26,8 +26,9 @@ function draw() {
     bubble.show();
     for (let other of bubbles){
       if ( bubble !== other && bubble.intersects(other)){
+        other.changeColor();
+        bubble.changeColor();
       }
     }
   }
-
 }
